@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Corbin's Portfolio</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<img id="corner-image" src="images/corner-image.png" alt="corner-image">
+<i class="fab fa-linkedin" onclick="openLinkedin();"></i>
+
+<div id="image-view" onclick="hideImage();">
+
+</div>
+
+<div id="project-info" onclick="hideProject();">
+  <div id="project-media">
+  </div>
+  <div class="project-footer" onclick="event.stopPropagation();">
+    <div id="project-title">
+    </div>
+    <div id="project-explination">
+    </div>
+  </div>
+</div>
+
+
+<div id="header">
+  <img src="images/avatar.png" alt="corner-image">
+  <div id="contact-info">
+    <p>Corbin's portfolio</p>
+    <p>corbinpixels@gmail.com</p>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="projects">
+    <div class="project-section-header">
+      <p>Top Projects:</p>
+    </div>
+    <br>
+
+  </div>
+</div>
+
+</body>
+<script src="project-list.js"></script>
+<script src="index.js"></script>
+</html>

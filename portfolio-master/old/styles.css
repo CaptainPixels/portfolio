@@ -1,0 +1,278 @@
+:root {
+  --background-color: #DDDDDD;
+  --text-color: black;
+  --text-color-focused: #545454;
+  --text-color-unfocused: #afafaf;
+  --bar-color: white;
+  --flavor-color: black;
+  --font-highlight-weight: 800;
+  --home-flex-seperation: 23%;
+  --home-flex-font-size: 40px;
+  --portfolio-bar-width: 80px;
+  --media-bar-height: 190px;
+  --media-border: 10px;
+  --text-width: 10%;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: 'Open Sans', sans-serif;
+}
+html, body, .centering-0, .centering-2, .portfolio-seperator {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+h1 {
+  font-size: 80px;
+  margin-bottom: 40px;
+}
+p {
+  display: inline-block;
+}
+
+/* home ***********************************************************************/
+#corner-image {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  transition: opacity .5s;
+  pointer-events: none;
+}
+.centering-0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.centering-1 {
+  display: flex;
+  justify-content: center;
+}
+.centering-1 > div {
+  user-select: none;
+  font-size: var(--home-flex-font-size);
+  width: var(--home-flex-seperation);
+  text-align: center;
+}
+.centering-1 > div > *:hover {
+  color: var(--text-color-focused);
+  font-weight: var(--font-highlight-weight);
+}
+.fa-linkedin.index, .fa-linkedin.portfolio {
+  position: absolute;
+  z-index: 2;
+  color: #2867B2;
+  font-size: 50px;
+  padding: 10px 14px 10px 10px;
+  cursor: pointer;
+  transition: transform .5s;
+}
+.fa-linkedin.index {
+  right: 0px;
+  bottom: 0px;
+}
+.fa-linkedin.portfolio {
+  left: 7px;
+  bottom: 2px;
+}
+.fa-linkedin:hover, .home-button:hover {
+  transform: scale(1.1);
+}
+
+/* about me *******************************************************************/
+.centering-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.centering-3 {
+  width: calc(90% - 498px);
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 30px;
+}
+.centering-3 > div {
+  text-align: center;
+  line-height: 70px;
+}
+.centering-3 > p {
+  margin-left: 40px;
+  width: 293px;
+}
+.home-button-about {
+  cursor: pointer;
+  transition: transform .5s;
+}
+.home-button-about:hover {
+  transform: scale(1.1);
+}
+
+/* portfolio ******************************************************************/
+#media {
+  display: flex;
+}
+#media > * {
+  margin: 16px 0 16px 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#media > *, #media > * > * {
+  border-radius: var(--media-border);
+}
+.link-warning {
+  position: absolute;
+  width: 280px;
+  background-color: rgba(0,0,0,.6);
+  bottom: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+  padding: 10px 0 10px 0;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  opacity: 0;
+  transition: opacity .5s;
+}
+.home-button {
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  padding: 20px 0 0 10px;
+  cursor: pointer;
+  transition: transform .5s;
+}
+.portfolio-seperator {
+  display: flex;
+}
+.bar-left {
+  width: var(--portfolio-bar-width);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bar-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#project-list {
+  display: flex;
+  flex-direction: column;
+}
+#project-list > div {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding: 30px 10px 30px 20px;
+  border-style: solid;
+  border-color: var(--bar-color);
+  border-width: 0 15px 0 0;
+  color: var(--text-color-unfocused);
+  user-select: none;
+}
+.project-content {
+  width: calc(100% - var(--portfolio-bar-width));
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#project-upper {
+  position: relative;
+  top: 40%;
+}
+#project-lower {
+  position: relative;
+  top: 70%;
+}
+#project-lower-hitbox {
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--portfolio-bar-width) + 10% - 10px);
+  height: var(--media-bar-height);
+  width: calc(80% - var(--portfolio-bar-width) + 18px);
+}
+#project-lower-media {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: absolute;
+  bottom: calc(-1 * var(--media-bar-height));
+  left: calc(var(--portfolio-bar-width) + 10% - 10px);
+  height: var(--media-bar-height);
+  width: calc(80% - var(--portfolio-bar-width) + 18px);
+  transition: bottom .5s;
+  background-color: var(--bar-color);
+  border-radius: var(--media-border);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#project-title {
+  margin-left: 10%;
+  font-size: 100px;
+  font-weight: 1000;
+  white-space: nowrap;
+  transition: transform .5s, opacity .5s;
+}
+#project-description {
+  display: flex;
+  margin: 20px 0 0 10%;
+  font-size: 20px;
+  transition: opacity .5s, transform .5s;
+}
+.project-descriptor {
+  color: var(--text-color-unfocused);
+}
+#project-year {
+  margin-right: 15%;
+}
+#project-explination {
+  position: relative;
+  margin: 0 var(--text-width) 0 var(--text-width);
+  font-size: 20px;
+  line-height: 30px;
+  padding-bottom: 60px;
+  transition: top .5s;
+}
+#project-explination-cover {
+  position: absolute;
+  background-image: linear-gradient(to bottom, var(--background-color), rgba(221,221,221,0));
+  width: 100%;
+  height: 180px;
+  transition: opacity .5s;
+}
+#action-indicator {
+  z-index: 3;
+  position: absolute;
+  font-size: 40px;
+  left: 350px;
+  bottom: 15%;
+  animation: indicator 2s infinite 0s ease;
+  transition: opacity .5s;
+}
+.fa-chevron-down {
+  opacity: 0;
+  animation: reveal-indicator 2s 1 .5s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes indicator {
+  0% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+@keyframes reveal-indicator {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

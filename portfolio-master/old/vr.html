@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="vr.js"></script>
+  </head>
+<body>
+  <a-scene>
+    <a-sky color="#a8afb3"></a-sky>
+    <a-entity id="left-controller" oculus-touch-controls="hand: left"></a-entity>
+    <a-entity id="right-controller" oculus-touch-controls="hand: right" trigger=""></a-entity>
+    <a-entity id="debug" position="0 1 -1" text="value: Hello World;"></a-entity>
+
+
+    <a-box
+      id="pointer"
+      scale="1 .2 .2"
+    ></a-box>
+    <a-box
+      id="pointer-adjusted"
+      position="0 0 -1"
+      scale="1 .2 .2"
+      color="#34abeb"
+    ></a-box>
+
+    <a-box
+      id="rotation-marker"
+      scale=".2  .2  .2"
+      color="#6173F4"
+      opacity=" 0.8"
+    ></a-box>
+
+    <a-entity id="project-selector">
+    </a-entity>
+
+  </a-scene>
+</body>
+<script src="vr2.js"></script>
+</html>

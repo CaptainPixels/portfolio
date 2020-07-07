@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Corbin Peters' Portfolio</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<img src="images/corner-image.png" alt="corner-image" id="corner-image">
+<img src="images/avatar.png" alt="home" class="home-button" height="60" width="60" onclick="openHome();">
+<i id="linked" class="fab fa-linkedin portfolio" onclick="openLinkedin();"></i>
+
+<div class="portfolio-seperator">
+  <div class="bar-left">
+    <div id="project-list">
+
+    </div>
+  </div>
+  <div class="project-content">
+    <div id="project-upper">
+      <div id="project-title">
+      </div>
+      <div id="project-description">
+        <div class="project-descriptor">
+          <p>When:</p>
+        </div>
+        <div id="project-year">
+        </div>
+        <div class="project-descriptor">
+          <p>Where:<p>
+        </div>
+        <div id="project-location">
+        </div>
+      </div>
+    </div>
+    <div id="action-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+    <div id="project-lower">
+      <div id="project-explination">
+      </div>
+    </div>
+    <div id="project-lower-media">
+      <div id="media">
+      </div>
+    </div>
+    <div id="project-lower-hitbox" onmouseenter="showProjectText();" onmouseleave="hideProjectText();">
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="portfolio.js"></script>
+</html>

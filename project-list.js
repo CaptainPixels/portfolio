@@ -99,7 +99,7 @@ const projectList = [
     "explination":
       "My favorite VR game is Pavlov. Because I love it so much, I decided I wanted to port some Minecraft maps into the game as playable content (Minecraft is my favorite game of all time). Currently, I have over 7,000 subscribers (or downloads) spread across 4 maps. Two of them are search and destroy based, while the other two are for TTT (Trouble in Terrorist Town).",
     "thumbnail": "steam-workshop.jpg",
-    "description": "Some steam workshop maps I made (>7k downloads) for Pavlov, the most popular multiplayer VR game",
+    "description": "Some steam workshop maps I made (>14k downloads) for Pavlov, the most popular multiplayer VR game",
     "media": {
       "youtube": [
       ],
